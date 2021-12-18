@@ -1,6 +1,12 @@
 # About this project
 This is transaction from merchant and outlet report sites that build with codeigniter 4 and authentication using jwt
 
+### Login example
+<img src="image/jwt-login.png">
+
+### Fetch data example
+<img src="image/get-data-example.png">
+
 # How to run Locally
 
 ## Requirement
