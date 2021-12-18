@@ -1,0 +1,2 @@
+-- mengambil tanggal
+select FROM_UNIXTIME(UNIX_TIMESTAMP(CONCAT('2021-11-',n)),'%Y-%m-%d') as Date from ( select (((b4.0 << 1 | b3.0) << 1 | b2.0) << 1 | b1.0) << 1 | b0.0 as n from (select 0 union all select 1) as b0, (select 0 union all select 1) as b1, (select 0 union all select 1) as b2, (select 0 union all select 1) as b3, (select 0 union all select 1) as b4 ) t where n > 0 and n <= day(last_day('2021-11-01'));
