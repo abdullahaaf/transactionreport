@@ -74,6 +74,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a class="nav-link" data-toggle="dropdown" href="#">
             Selamat Datang
           </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <div class="dropdown-divider"></div>
+            <button type="button" class="btn btn-sm btn-danger" id="btn-logout">Logout</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -208,6 +212,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               table = $('#example').DataTable();
             }
           });
+        });
+
+        $('body').on('click','#btn-logout',function(){
+          var cookies = $.cookie();
+          for(var cookie in cookies) {
+            $.removeCookie(cookie);
+          }
+          window.location.href=window.location.origin+'/logout';
         });
     });
 </script>

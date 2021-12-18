@@ -42,6 +42,7 @@ $routes->group("api", ['filter' => 'auth'],function($routes){
 // route since we don't have to scan directories.
 $routes->get('/','LoginController::loginPage');
 $routes->post('login','LoginController::login');
+$routes->get('logout','LoginController::logout');
 
 $routes->get('merchant','LaporanController::merchantPage');
 $routes->get('outlet','LaporanController::outletPage');

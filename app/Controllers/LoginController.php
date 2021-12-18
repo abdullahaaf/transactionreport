@@ -65,4 +65,9 @@ class LoginController extends ResourceController
     {
         return view('login');
     }
+
+    public function logout()
+    {
+        return redirect()->to(base_url('/'));
+    }
 }
